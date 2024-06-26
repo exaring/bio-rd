@@ -24,14 +24,14 @@ func newBGPPathACache() *bgpPathACache {
 }
 
 func (bgpc *bgpPathACache) get(p *BGPPathA) *BGPPathA {
-	bgpc.cacheMu.Lock()
-
-	if x, ok := bgpc.cache[*p]; ok {
-		bgpc.cacheMu.Unlock()
-		return x
-	}
-
-	bgpc.cache[*p] = p
-	bgpc.cacheMu.Unlock()
+	//	bgpc.cacheMu.Lock()
+	//
+	//	if x, ok := bgpc.cache[*p]; ok {
+	//		bgpc.cacheMu.Unlock()
+	//		return x
+	//	}
+	//
+	//	bgpc.cache[*p] = p
+	//	bgpc.cacheMu.Unlock()
 	return p
 }
